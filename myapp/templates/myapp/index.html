@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#start").click(function(){
+            $.post("/start_recording/", function(data){
+                console.log(data.success);
+            });
+        });
+        $("#stop").click(function(){
+            $.post("/stop_recording/", function(data){
+                console.log(data.success);
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+
+</body>
+</html>
